@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "folder-prettifier"
+    }
+  },
+  "defaultProject": "folder-prettifier",
+  "cli": {
+    "analytics": "c8d0f58e-150a-498c-b952-9910c1a38fbe"
+  }
 }
