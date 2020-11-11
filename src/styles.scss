@@ -81,3 +81,18 @@ textarea {
   background: $background;
   width: 100%;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $background;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba($primary, 0.5);
+}
