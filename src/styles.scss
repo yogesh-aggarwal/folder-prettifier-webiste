@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./theme";
+
+@font-face {
+  font-family: "Batman";
+  src: url("./assets/batman.woff");
+}
+
+@font-face {
+  font-family: "Road Rage";
+  src: url("./assets/road_rage.woff");
+}
+
+* {
+  font-family: "Batman";
+  box-sizing: border-box;
+  transition: all 0.2s ease-out;
+  color: $text-color;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: $background;
+  width: 100vw;
+  height: 100vh;
+}
