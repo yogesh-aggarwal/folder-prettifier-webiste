@@ -1,0 +1,48 @@
+@import "../../../tools";
+
+.container {
+  * {
+    font-family: "Hemi Head";
+  }
+  padding-top: 5rem;
+
+  .heading {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .description {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #ccc;
+    margin-top: 1rem;
+  }
+
+  .form {
+    margin-top: 4rem;
+
+    .user {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 3rem;
+    }
+
+    .field {
+      margin-bottom: 1.5rem;
+
+      .name {
+        margin-bottom: 0.5rem;
+      }
+
+      textarea {
+        height: 35vh;
+        resize: none;
+      }
+    }
+  }
+
+  .action {
+    @include center();
+    margin-top: 2rem;
+  }
+}

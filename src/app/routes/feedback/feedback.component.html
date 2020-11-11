@@ -1,1 +1,33 @@
-<p>feedback works!</p>
+<div class="container">
+  <div class="heading">Feedback</div>
+  <div class="description">
+    Provide your highly valuable feedback of the software here & help us realize
+    where we're lacking & doing!
+  </div>
+  <div class="form">
+    <div class="user">
+      <div class="field">
+        <div class="name">What's you name buddy?</div>
+        <input type="text" (input)="updateValue($event.target.value, 'name')" />
+      </div>
+      <div class="field">
+        <div class="name">Email address (optional)</div>
+        <input
+          type="text"
+          (input)="updateValue($event.target.value, 'email')"
+        />
+      </div>
+    </div>
+    <div class="field">
+      <div class="name">Please write your experience here</div>
+      <textarea
+        (input)="updateValue($event.target.value, 'feedback')"
+      ></textarea>
+    </div>
+  </div>
+  <div class="action">
+    <button (click)="submit()">
+      <div class="text">Submit</div>
+    </button>
+  </div>
+</div>
