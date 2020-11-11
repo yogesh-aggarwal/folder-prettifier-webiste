@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "folder-prettifier": {
+      "hosting": {
+        "folder-prettifier": [
+          "folder-prettifier"
+        ]
+      }
+    }
+  }
+}
