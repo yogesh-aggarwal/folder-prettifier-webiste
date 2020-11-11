@@ -1,0 +1,21 @@
+@import "../../../tools";
+
+.container {
+  @include center();
+  justify-content: space-between;
+  padding: 1.5rem 5%;
+
+  .logo {
+    @include center();
+
+    img {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .brand {
+      margin-left: 1rem;
+      font-size: 1.1rem;
+    }
+  }
+}
