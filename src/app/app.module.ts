@@ -5,14 +5,30 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./routes/home/home.component";
 import { FeedbackComponent } from "./routes/feedback/feedback.component";
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { PrivacyComponent } from './routes/privacy/privacy.component';
-import { DownloadComponent } from './routes/download/download.component';
-import { GuideComponent } from './routes/guide/guide.component';
+import { NavbarComponent } from "./components/navbar/navbar.component";
+import { PrivacyComponent } from "./routes/privacy/privacy.component";
+import { DownloadComponent } from "./routes/download/download.component";
+import { GuideComponent } from "./routes/guide/guide.component";
+import { environment } from "src/environments/environment.prod";
+import { AngularFireModule } from "@angular/fire";
+import { AngularFirestoreModule } from "@angular/fire/firestore";
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, FeedbackComponent, NavbarComponent, PrivacyComponent, DownloadComponent, GuideComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    FeedbackComponent,
+    NavbarComponent,
+    PrivacyComponent,
+    DownloadComponent,
+    GuideComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
