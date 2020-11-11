@@ -1,0 +1,69 @@
+@import "../../../tools";
+@import "../../../theme";
+
+.container {
+  position: relative;
+  @include center();
+  height: 80%;
+  justify-content: space-between;
+  padding: 0 5%;
+
+  .watermark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 35rem;
+    transform: rotate(-18deg);
+    opacity: 2%;
+    font-family: "Hemi Head";
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  .content {
+    .headline {
+      z-index: 100;
+
+      * {
+        font-family: "Hemi Head";
+        text-align: center;
+        font-size: 5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      #second {
+        color: $primary;
+      }
+
+      #third {
+        font-family: "Road Rage";
+        color: $highlight;
+      }
+    }
+
+    .availability {
+      @include center();
+      justify-content: space-between;
+      margin: 3rem 0;
+
+      .heading {
+        font-size: 1.5rem;
+      }
+
+      .platforms {
+        @include center();
+
+        img {
+          width: 2.5rem;
+          height: 2.5rem;
+          margin-left: 1rem;
+        }
+      }
+    }
+
+    .actions {
+      @include center();
+      justify-content: space-between;
+    }
+  }
+}
