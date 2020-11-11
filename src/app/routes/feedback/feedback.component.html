@@ -26,7 +26,7 @@
     </div>
   </div>
   <div class="action">
-    <button (click)="submit()">
+    <button (click)="submit()" [disabled]="isDisabled">
       <i class="las la-check-double"></i>
       <div class="text">Submit</div>
     </button>

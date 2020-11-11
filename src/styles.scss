@@ -55,6 +55,10 @@ button {
   font-size: 1.1rem;
   cursor: pointer;
 
+  &:disabled {
+    border: 3px dashed $highlight;
+  }
+
   i {
     margin-right: 0.5rem;
     font-size: 1.5rem;

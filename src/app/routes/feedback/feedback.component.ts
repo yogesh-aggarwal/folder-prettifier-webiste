@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { AngularFirestore } from "@angular/fire/firestore";
 
 @Component({
   selector: "app-feedback",
@@ -11,17 +12,18 @@ export class FeedbackComponent implements OnInit {
     email: boolean;
     feedback: boolean;
   } = {
-    name: false,
+    name: true,
     email: false,
-    feedback: false,
+    feedback: true,
   };
   values: {
     name: string;
     email: string;
     feedback: string;
   } = { name: "", email: "", feedback: "" };
+  isDisabled: boolean = false;
 
-  constructor() {}
+  constructor(private firestore: AngularFirestore) {}
 
   ngOnInit(): void {}
 
@@ -36,12 +38,26 @@ export class FeedbackComponent implements OnInit {
     return re.test(String(email).toLowerCase());
   }
 
-  submit() {
+  async submit() {
+    this.isDisabled = true;
     if (this.values.email && !this.validateEmail(this.values.email)) {
       console.log("Invalid Email!");
+      this.isDisabled = false;
       return;
     }
-    if (this.error.name && this.error.feedback) return;
-    console.log(this.values);
+
+    if (this.error.name || this.error.feedback) {
+      this.isDisabled = false;
+      return;
+    }
+
+    await this.firestore
+      .collection("feedback")
+      .doc(Date.now().toString())
+      .set({
+        ...this.values,
+        dateSubmitted: new Date(),
+      });
+    this.isDisabled = false;
   }
 }
