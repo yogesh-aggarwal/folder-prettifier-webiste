@@ -41,6 +41,10 @@ body {
   overflow: hidden;
 }
 
+.container {
+  padding: 0 3%;
+}
+
 button {
   @include center();
   border: none;
