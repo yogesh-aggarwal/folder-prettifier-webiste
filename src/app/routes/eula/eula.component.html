@@ -1,10 +1,15 @@
 <div class="container">
-  <div class="heading">End-User Agreement License</div>
+  <div class="heading" *ngIf="!isDownloadRequest">
+    End-User Agreement License
+  </div>
+  <div class="heading" *ngIf="isDownloadRequest">
+    Agree the License to Continue Download
+  </div>
   <div class="content">
     <p>Last updated: November 12, 2020</p>
     <p>
-      Please read this End-User License Agreement carefully before downloading
-      or using Folder Prettifier.
+      Please read this End-User License Agreement carefully before clicking the
+      "I Agree" button, downloading or using Folder Prettifier.
     </p>
     <h1>Interpretation and Definitions</h1>
     <h2>Interpretation</h2>
@@ -276,5 +281,8 @@
         <a routerLink="feedback">https://folder-prettifier.web.app/feedback</a>
       </li>
     </ul>
+  </div>
+  <div class="agree">
+    <button *ngIf="isDownloadRequest" (click)="agree()">I Agree</button>
   </div>
 </div>

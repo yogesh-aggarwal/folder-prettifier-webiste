@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 @import "../../../theme";
+@import "../../../tools";
 
 .container {
   padding-top: 5rem;
@@ -21,5 +22,10 @@
       font-family: "Poppins";
       user-select: text;
     }
+  }
+
+  .agree {
+    @include center();
+    margin-bottom: 3rem;
   }
 }

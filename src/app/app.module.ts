@@ -12,6 +12,7 @@ import { GuideComponent } from "./routes/guide/guide.component";
 import { environment } from "src/environments/environment.prod";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { NoticeComponent } from './components/notice/notice.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
     EulaComponent,
     DownloadComponent,
     GuideComponent,
+    NoticeComponent,
   ],
   imports: [
     BrowserModule,
