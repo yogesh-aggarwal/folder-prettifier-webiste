@@ -46,6 +46,10 @@ body {
   padding: 0 3%;
 }
 
+a {
+  text-decoration: none;
+}
+
 button {
   @include center();
   border: none;
