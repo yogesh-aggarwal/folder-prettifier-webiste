@@ -44,11 +44,5 @@
   .action {
     @include center();
     margin-top: 2rem;
-
-    button {
-      i {
-        // font-family: "Line Awesome Free";
-      }
-    }
   }
 }

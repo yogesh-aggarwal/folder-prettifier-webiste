@@ -283,6 +283,9 @@
     </ul>
   </div>
   <div class="agree">
-    <button *ngIf="isDownloadRequest" (click)="agree()">I Agree</button>
+    <button *ngIf="isDownloadRequest" (click)="agree()">
+      <i class="las la-check-double"></i>
+      <div class="text">I Agree</div>
+    </button>
   </div>
 </div>
