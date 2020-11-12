@@ -6,7 +6,7 @@ import { AppComponent } from "./app.component";
 import { HomeComponent } from "./routes/home/home.component";
 import { FeedbackComponent } from "./routes/feedback/feedback.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
-import { PrivacyComponent } from "./routes/privacy/privacy.component";
+import { EulaComponent } from "./routes/eula/eula.component";
 import { DownloadComponent } from "./routes/download/download.component";
 import { GuideComponent } from "./routes/guide/guide.component";
 import { environment } from "src/environments/environment.prod";
@@ -19,7 +19,7 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
     HomeComponent,
     FeedbackComponent,
     NavbarComponent,
-    PrivacyComponent,
+    EulaComponent,
     DownloadComponent,
     GuideComponent,
   ],

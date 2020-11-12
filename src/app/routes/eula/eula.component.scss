@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&display=swap");
+
+.container {
+  padding-top: 5rem;
+
+  .heading {
+    font-family: "Hemi Head";
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .content {
+    * {
+      font-family: "Roboto Slab";
+    }
+  }
+}
