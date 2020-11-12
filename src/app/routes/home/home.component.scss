@@ -8,16 +8,16 @@
   justify-content: space-between;
 
   .watermark {
-    position: absolute;
-    top: 0;
-    left: 0;
+    @include watermark();
     font-size: 35rem;
     transform: rotate(-18deg);
-    opacity: 3%;
-    font-family: "Hemi Head";
-    user-select: none;
-    -webkit-user-drag: none;
-    pointer-events: none;
+  }
+
+  .company {
+    @include watermark();
+    left: 3%;
+    font-size: 3rem;
+    opacity: 30%;
   }
 
   .content {
